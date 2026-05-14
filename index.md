@@ -1,3 +1,7 @@
+---
+layout: default
+title: Home
+---
 # Welcome to my Space
 这里是我的个人博客，平时可能会在上面发一些无关紧要的东西，可能有学习，可能是一些无聊の日常
 ## About Me 关于我
