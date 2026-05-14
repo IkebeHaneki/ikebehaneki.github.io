@@ -1,3 +1,7 @@
+---
+layout: default
+title: About
+---
 # About Me
 
 你好,我是Haneki。
