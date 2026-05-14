@@ -6,76 +6,258 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+    :root {
+      --bg: #f6f4ef;
+      --card: #ffffff;
+      --text: #242424;
+      --muted: #6f6f6f;
+      --link: #3b7ddd;
+      --link-hover: #1f5fbf;
+      --border: #e7e1d8;
+      --soft: #f2ede5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      max-width: 850px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 30px 20px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
-      color: #333;
-      background-color: #fafafa;
+      padding: 32px 22px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", Arial, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #fff7e8 0, transparent 320px),
+        linear-gradient(180deg, #faf7f1 0%, var(--bg) 100%);
     }
 
     header {
-      margin-bottom: 30px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 15px;
+      margin-bottom: 34px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
     }
 
     .site-title {
-      font-size: 28px;
-      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
       text-decoration: none;
       color: #222;
+    }
+
+    .site-title:hover {
+      color: var(--link);
     }
 
     nav {
-      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     nav a {
-      margin-right: 14px;
+      display: inline-block;
+      padding: 6px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.65);
+      color: #444;
       text-decoration: none;
-      color: #2a7ae2;
       font-size: 15px;
+      transition: all 0.2s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background: var(--text);
+      border-color: var(--text);
+      color: white;
+      text-decoration: none;
+      transform: translateY(-1px);
     }
 
     main {
-      background: white;
-      padding: 28px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      background: var(--card);
+      padding: 36px 40px;
+      border: 1px solid rgba(231, 225, 216, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 14px 35px rgba(64, 48, 32, 0.08);
     }
 
-    h1, h2, h3 {
-      color: #222;
+    h1 {
+      margin-top: 0;
+      font-size: 34px;
+      line-height: 1.35;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      margin-top: 34px;
+      font-size: 26px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      margin-top: 24px;
+      font-size: 21px;
+    }
+
+    p {
+      margin: 14px 0;
     }
 
     a {
-      color: #2a7ae2;
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+
+    .post-meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: -8px;
+      margin-bottom: 24px;
+    }
+
+    .post-card {
+      padding: 22px 24px;
+      margin: 22px 0;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #fffdf9 100%);
+      box-shadow: 0 6px 18px rgba(64, 48, 32, 0.05);
+    }
+
+    .post-card h2,
+    .post-card h3 {
+      margin-top: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .post-card-title {
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    .post-card-meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 6px 0 14px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: #444;
+      font-size: 14px;
+    }
+
+    .read-more:hover {
+      background: var(--text);
+      color: white;
+      text-decoration: none;
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 28px;
+    }
+
+    .filter-buttons button {
+      padding: 7px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #fffaf2;
+      color: #333;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .filter-buttons button:hover {
+      background: var(--text);
+      color: white;
+      border-color: var(--text);
+      transform: translateY(-1px);
     }
 
     footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      font-size: 14px;
-      color: #777;
+      margin-top: 42px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
       text-align: center;
+      font-size: 14px;
     }
 
-    @media (max-width: 600px) {
-      nav a {
-        display: inline-block;
-        margin-bottom: 8px;
+    code {
+      padding: 2px 5px;
+      border-radius: 5px;
+      background: #f3eee7;
+      font-family: "SFMono-Regular", Consolas, monospace;
+    }
+
+    blockquote {
+      margin: 20px 0;
+      padding: 12px 18px;
+      border-left: 4px solid var(--border);
+      background: #fffaf2;
+      color: #555;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 22px 14px;
+      }
+
+      .site-title {
+        font-size: 30px;
       }
 
       main {
-        padding: 20px;
+        padding: 26px 22px;
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
+
+      nav a {
+        font-size: 14px;
+        padding: 5px 11px;
       }
     }
   </style>
@@ -85,16 +267,16 @@
   <header>
     <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
-   <nav>
-  <a href="{{ '/' | relative_url }}">Home</a>
-  <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-  <a href="{{ '/life.html' | relative_url }}">Life</a>
-  <a href="{{ '/notes.html' | relative_url }}">Notes</a>
-  <a href="{{ '/games.html' | relative_url }}">Games</a>
-  <a href="{{ '/novels.html' | relative_url }}">Novels</a>
-  <a href="{{ '/random.html' | relative_url }}">Random</a>
-  <a href="{{ '/about.html' | relative_url }}">About</a>
-   </nav>
+    <nav>
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+      <a href="{{ '/life.html' | relative_url }}">Life</a>
+      <a href="{{ '/notes.html' | relative_url }}">Notes</a>
+      <a href="{{ '/games.html' | relative_url }}">Games</a>
+      <a href="{{ '/novels.html' | relative_url }}">Novels</a>
+      <a href="{{ '/random.html' | relative_url }}">Random</a>
+      <a href="{{ '/about.html' | relative_url }}">About</a>
+    </nav>
   </header>
 
   <main>
