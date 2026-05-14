@@ -4,7 +4,16 @@ title: Notes
 ---
 
 # Notes / 学习笔记
-这里会放一些学习笔记
+
+这里会放一些学习笔记。
+
+可能包括：
+
+- Mathematics
+- Statistics
+- Linear Programming
+- Data Science
+- Programming
 
 ## Posts in Notes
 
@@ -12,15 +21,21 @@ title: Notes
 
 {% if notes_posts.size > 0 %}
 {% for post in notes_posts %}
-### [{{ post.title }}]({{ post.url | relative_url }})
+<div class="post-card">
+  <div class="post-card-title">
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </div>
 
-{{ post.date | date: "%Y-%m-%d" }}
+  <div class="post-card-meta">
+    {{ post.date | date: "%Y-%m-%d" }}
+  </div>
 
-{{ post.excerpt }}
+  <p>
+    {{ post.excerpt }}
+  </p>
 
-[Read more]({{ post.url | relative_url }})
-
----
+  <a class="read-more" href="{{ post.url | relative_url }}">Read more</a>
+</div>
 {% endfor %}
 {% else %}
 No posts in this category yet.
