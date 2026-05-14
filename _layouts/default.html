@@ -22,16 +22,17 @@
     }
 
     body {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 32px 22px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", Arial, sans-serif;
-      line-height: 1.8;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, #fff7e8 0, transparent 320px),
-        linear-gradient(180deg, #faf7f1 0%, var(--bg) 100%);
-    }
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 22px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", Arial, sans-serif;
+  line-height: 1.8;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 221, 180, 0.65) 0, transparent 330px),
+    radial-gradient(circle at top right, rgba(180, 210, 255, 0.45) 0, transparent 360px),
+    linear-gradient(180deg, #fbf7f0 0%, #f4efe7 100%);
+}
 
     header {
       margin-bottom: 34px;
@@ -148,6 +149,12 @@
       border-radius: 16px;
       background: linear-gradient(180deg, #ffffff 0%, #fffdf9 100%);
       box-shadow: 0 6px 18px rgba(64, 48, 32, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(64, 48, 32, 0.10);
     }
 
     .post-card h2,
@@ -267,16 +274,16 @@
   <header>
     <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
-    <nav>
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-      <a href="{{ '/life.html' | relative_url }}">Life</a>
-      <a href="{{ '/notes.html' | relative_url }}">Notes</a>
-      <a href="{{ '/games.html' | relative_url }}">Games</a>
-      <a href="{{ '/novels.html' | relative_url }}">Novels</a>
-      <a href="{{ '/random.html' | relative_url }}">Random</a>
-      <a href="{{ '/about.html' | relative_url }}">About</a>
-    </nav>
+   <nav>
+  <a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+  <a class="{% if page.url contains '/blog' %}active{% endif %}" href="{{ '/blog.html' | relative_url }}">Blog</a>
+  <a class="{% if page.url contains '/life' %}active{% endif %}" href="{{ '/life.html' | relative_url }}">Life</a>
+  <a class="{% if page.url contains '/notes' %}active{% endif %}" href="{{ '/notes.html' | relative_url }}">Notes</a>
+  <a class="{% if page.url contains '/games' %}active{% endif %}" href="{{ '/games.html' | relative_url }}">Games</a>
+  <a class="{% if page.url contains '/novels' %}active{% endif %}" href="{{ '/novels.html' | relative_url }}">Novels</a>
+  <a class="{% if page.url contains '/random' %}active{% endif %}" href="{{ '/random.html' | relative_url }}">Random</a>
+  <a class="{% if page.url contains '/about' %}active{% endif %}" href="{{ '/about.html' | relative_url }}">About</a>
+</nav>
   </header>
 
   <main>
