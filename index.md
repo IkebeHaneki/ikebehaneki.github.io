@@ -21,15 +21,22 @@ title: Home
 {% assign latest_post = site.posts.first %}
 
 {% if latest_post %}
-### [{{ latest_post.title }}]({{ latest_post.url | relative_url }})
+<div class="post-card">
+  <div class="post-card-title">
+    <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
+  </div>
 
-{{ latest_post.date | date: "%Y-%m-%d" }}
+  <div class="post-card-meta">
+    {{ latest_post.date | date: "%Y-%m-%d" }}
+    · Category: {{ latest_post.categories | join: ", " }}
+  </div>
 
-Category: {{ latest_post.categories | join: ", " }}
+  <p>
+    {{ latest_post.excerpt }}
+  </p>
 
-{{ latest_post.excerpt }}
-
-[Read more]({{ latest_post.url | relative_url }})
+  <a class="read-more" href="{{ latest_post.url | relative_url }}">Read more</a>
+</div>
 {% else %}
 No blog posts yet.
 {% endif %}
