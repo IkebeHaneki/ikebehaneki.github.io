@@ -16,29 +16,24 @@ title: Blog
   <button onclick="filterPosts('random')">Random Thoughts / 随想</button>
 </div>
 
-<br>
-
 <div id="post-list">
 
 {% for post in site.posts %}
-<div class="post-item" data-category="{{ post.categories | join: ' ' }}">
-  <h2>
+<div class="post-item post-card" data-category="{{ post.categories | join: ' ' }}">
+  <div class="post-card-title">
     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  </h2>
+  </div>
 
-  <p>
-    <strong>Date:</strong> {{ post.date | date: "%Y-%m-%d" }}
-  </p>
-
-  <p>
-    <strong>Category:</strong> {{ post.categories | join: ", " }}
-  </p>
+  <div class="post-card-meta">
+    {{ post.date | date: "%Y-%m-%d" }}
+    · Category: {{ post.categories | join: ", " }}
+  </div>
 
   <p>
     {{ post.excerpt }}
   </p>
 
-  <hr>
+  <a class="read-more" href="{{ post.url | relative_url }}">Read more</a>
 </div>
 {% endfor %}
 
