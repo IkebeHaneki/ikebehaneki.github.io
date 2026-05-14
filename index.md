@@ -9,6 +9,25 @@
 - [Games / 游戏](games.html)
 - [Web Novels / 网文小说](novels.html)
 - [About Me / 关于我](about.html)
+  
+## Latest Blog
+
+{% assign latest_post = site.posts.first %}
+
+{% if latest_post %}
+### [{{ latest_post.title }}]({{ latest_post.url | relative_url }})
+
+{{ latest_post.date | date: "%Y-%m-%d" }}
+
+Category: {{ latest_post.categories | join: ", " }}
+
+{{ latest_post.excerpt }}
+
+[Read more]({{ latest_post.url | relative_url }})
+{% else %}
+No blog posts yet.
+{% endif %}
+
 
 ## Recent Plan
 
