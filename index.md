@@ -2,10 +2,21 @@
 layout: default
 title: Home
 ---
-# Welcome to my Space
-这里是我的个人博客，平时可能会在上面发一些无关紧要的东西，可能有学习，可能是一些无聊の日常
-## About Me 关于我
-我是一个目前在加拿大UBC就读数学本科的鼠鼠，对数据和编程有点兴趣（但不多），这个博客网站目前只是兴趣使然，我会放一些简历，学习类的东西在上面，但是更多的还是一些生活向的事情吧
+
+<div class="hero">
+  <p class="hero-kicker">Personal Blog · Life · Notes · Games</p>
+
+  <h1>Welcome to Haneki's Space</h1>
+
+  <p class="hero-text">
+    这里是我的个人小站，用来记录学习、日常、游戏、网文小说，以及一些突然想到的事情。
+  </p>
+
+  <p class="hero-text">
+    它不只是一个作品集，更像是一个慢慢积累生活痕迹的地方。
+  </p>
+</div>
+
 ## Categories 分类
 
 -- [Blog / 所有文章](blog.html)
