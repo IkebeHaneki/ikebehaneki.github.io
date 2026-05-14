@@ -1,3 +1,7 @@
+---
+layout: default
+title: Web Novels
+---
 # Web Novels / 网文小说
 
 这里会记录一些网文小说相关内容。
