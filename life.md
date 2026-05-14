@@ -1,3 +1,7 @@
+---
+layout: default
+title: Life
+---
 # Life / 日常
 
 这里会记录一些日常生活。
