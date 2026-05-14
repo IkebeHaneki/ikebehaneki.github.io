@@ -1,3 +1,7 @@
+---
+layout: default
+title: Games
+---
 # Games / 游戏
 
 这里会记录一些游戏相关内容。
