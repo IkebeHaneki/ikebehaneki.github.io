@@ -2,6 +2,7 @@
 layout: default
 title: Web Novels
 ---
+
 # Web Novels / 网文小说
 
 这里会记录一些网文小说相关内容。
@@ -19,15 +20,21 @@ title: Web Novels
 
 {% if novel_posts.size > 0 %}
 {% for post in novel_posts %}
-### [{{ post.title }}]({{ post.url | relative_url }})
+<div class="post-card">
+  <div class="post-card-title">
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </div>
 
-{{ post.date | date: "%Y-%m-%d" }}
+  <div class="post-card-meta">
+    {{ post.date | date: "%Y-%m-%d" }}
+  </div>
 
-{{ post.excerpt }}
+  <p>
+    {{ post.excerpt }}
+  </p>
 
-[Read more]({{ post.url | relative_url }})
-
----
+  <a class="read-more" href="{{ post.url | relative_url }}">Read more</a>
+</div>
 {% endfor %}
 {% else %}
 No web novel posts yet.
