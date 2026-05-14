@@ -9,6 +9,7 @@
 - [Notes / 学习笔记](notes.html)
 - [Games / 游戏](games.html)
 - [Web Novels / 网文小说](novels.html)
+- [Randoms / 随想](random.html)
 - [About Me / 关于我](about.html)
   
 ## Latest Blog 最新的
