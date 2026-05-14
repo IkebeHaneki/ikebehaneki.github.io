@@ -1,8 +1,3 @@
----
-layout: default
-title: Blog
----
-
 # Blog / 所有文章
 
 这里会显示我发布过的所有博客。你可以根据分类筛选文章。
