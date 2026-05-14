@@ -1,3 +1,8 @@
+---
+layout: default
+title: Notes
+---
+
 # Notes / 学习笔记
 这里会放一些学习笔记
 
