@@ -2,7 +2,7 @@
 layout: post
 title: "第一篇博客：这个小站也算是开始了"
 date: 2026-05-13
-categories: life
+categories: Life
 tags: [daily, blog]
 ---
 
