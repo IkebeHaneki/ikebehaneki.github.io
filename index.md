@@ -4,6 +4,7 @@
 我是一个目前在加拿大UBC就读数学本科的鼠鼠，对数据和编程有点兴趣（但不多），这个博客网站目前只是兴趣使然，我会放一些简历，学习类的东西在上面，但是更多的还是一些生活向的事情吧
 ## Categories 分类
 
+-- [Blog / 所有文章](blog.html)
 - [Life / 日常](life.html)
 - [Notes / 学习笔记](notes.html)
 - [Games / 游戏](games.html)
