@@ -2,6 +2,7 @@
 layout: default
 title: Life
 ---
+
 # Life / 日常
 
 这里会记录一些日常生活。
@@ -14,15 +15,21 @@ title: Life
 
 {% if life_posts.size > 0 %}
 {% for post in life_posts %}
-### [{{ post.title }}]({{ post.url | relative_url }})
+<div class="post-card">
+  <div class="post-card-title">
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </div>
 
-{{ post.date | date: "%Y-%m-%d" }}
+  <div class="post-card-meta">
+    {{ post.date | date: "%Y-%m-%d" }}
+  </div>
 
-{{ post.excerpt }}
+  <p>
+    {{ post.excerpt }}
+  </p>
 
-[Read more]({{ post.url | relative_url }})
-
----
+  <a class="read-more" href="{{ post.url | relative_url }}">Read more</a>
+</div>
 {% endfor %}
 {% else %}
 No posts in this category yet.
