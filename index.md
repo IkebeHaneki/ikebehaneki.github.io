@@ -1,31 +1,26 @@
----
-layout: default
-title: Home
----
-
 <div class="hero">
-  <p class="hero-kicker">Personal Blog · Life · Notes · Games</p>
+  <p class="hero-kicker">Haneki's Personal Space ✦</p>
 
   <h1>Welcome to Haneki's Space</h1>
 
   <p class="hero-text">
-    这里是我的个人小站，用来记录学习、日常、游戏、网文小说，以及一些突然想到的事情。
+    这里是一个记录日常、学习笔记、游戏、网文小说和一些突然想到的事情的小站。
   </p>
 
   <p class="hero-text">
-    它不只是一个作品集，更像是一个慢慢积累生活痕迹的地方。
+    希望它能慢慢变成一个有生活痕迹、也有一点个人风格的地方。
   </p>
 </div>
 
 ## Categories 分类
 
--- [Blog / 所有文章](blog.html)
-- [Life / 日常](life.html)
-- [Notes / 学习笔记](notes.html)
-- [Games / 游戏](games.html)
-- [Web Novels / 网文小说](novels.html)
-- [Randoms / 随想](random.html)
-- [About Me / 关于我](about.html)
+- [🌸 Blog / 所有文章](blog.html)
+- [☁️ Life / 日常](life.html)
+- [📘 Notes / 学习笔记](notes.html)
+- [🎮 Games / 游戏](games.html)
+- [📖 Web Novels / 网文小说](novels.html)
+- [✨ Random Thoughts / 随想](random.html)
+- [🫧 About Me / 关于我](about.html)
   
 ## Latest Blog 最新的
 
