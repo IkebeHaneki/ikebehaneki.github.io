@@ -8,12 +8,12 @@ title: Blog
 这里会显示我发布过的所有博客。你可以根据分类筛选文章。
 
 <div class="filter-buttons">
-  <button onclick="filterPosts('all')">All</button>
-  <button onclick="filterPosts('life')">Life / 日常</button>
-  <button onclick="filterPosts('notes')">Notes / 学习笔记</button>
-  <button onclick="filterPosts('games')">Games / 游戏</button>
-  <button onclick="filterPosts('novels')">Web Novels / 网文小说</button>
-  <button onclick="filterPosts('random')">Random Thoughts / 随想</button>
+  <button onclick="filterPosts('all')">🌸 All</button>
+  <button onclick="filterPosts('life')">☁️ Life / 日常</button>
+  <button onclick="filterPosts('notes')">📘 Notes / 学习笔记</button>
+  <button onclick="filterPosts('games')">🎮 Games / 游戏</button>
+  <button onclick="filterPosts('novels')">📖 Web Novels / 网文小说</button>
+  <button onclick="filterPosts('random')">✨ Random Thoughts / 随想</button>
 </div>
 
 <div id="post-list">
