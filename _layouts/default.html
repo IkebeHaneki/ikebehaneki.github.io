@@ -11,8 +11,8 @@
   --card: rgba(255, 255, 255, 0.88);
   --text: #3a3042;
   --muted: #8a7f91;
-  --link: #ff6fae;
-  --link-hover: #e84f99;
+  --link: #4f8cff;
+  --link-hover: #7c5cff;
   --border: #f4d7e8;
   --soft: #fff0f7;
   --blue-soft: #eef7ff;
@@ -239,8 +239,17 @@
     }
 
     .post-card-title {
-      font-size: 23px;
-      font-weight: 700;
+        font-weight: 800;
+        background: linear-gradient(135deg, #4f8cff, #ff7ab8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: none;
+    }
+
+    .post-card-title a:hover {
+        opacity: 0.8;
+        text-decoration: none;
     }
 
     .post-card-meta {
